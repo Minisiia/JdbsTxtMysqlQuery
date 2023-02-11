@@ -1,0 +1,3 @@
+SELECT staff.name, staff.phone, personalInfo.adress FROM staff JOIN personalInfo ON staff.id = personalInfo.staff_id;
+SELECT staff.name, personalInfo.birth_day, staff.phone FROM staff JOIN personalInfo ON staff.id = personalInfo.staff_id WHERE personalInfo.maritalStatus IN ('не женат', 'не замужем');
+SELECT staff.name, personalInfo.birth_day, staff.phone FROM staff JOIN personalInfo ON staff.id = personalInfo.staff_id JOIN serviceInfo ON staff.id = serviceInfo.staff_id WHERE serviceInfo.position = 'Менеджер';
